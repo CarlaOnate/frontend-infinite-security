@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://153.92.222.205:8000/api";
+const baseURL = "https://infinite-security.herokuapp.com/api";
 const service = axios.create({ baseURL, headers: {
   'Content-Type': 'application/json',
 },
