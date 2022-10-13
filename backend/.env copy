@@ -1,0 +1,13 @@
+DJANGO_SECRET_KEY=%jjnu7=54g6s%qjfnhbpw0zeoei=$!her*y(p%!&84rs$4l85io
+DJANGO_DATABASE_HOST=ec2-3-225-110-188.compute-1.amazonaws.com
+DJANGO_DATABASE_NAME=dbitjmmp98b2uo
+DJANGO_DATABASE_USER=igxegiijihdqxi
+DJANGO_DATABASE_PASSWORD=344e5ba904fe77d1f530953414330df125e14464ebe50af8fb21fe326b217501
+DJANGO_DATABASE_PORT=5432
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_FROM = 'inifniteseguridadapp@outlook.com'
+EMAIL_HOST_USER = "inifniteseguridadapp@outlook.com"
+EMAIL_HOST_PASSWORD = "InfiniteSecurity1!"
