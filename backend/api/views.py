@@ -95,10 +95,9 @@ def reservaJSONResponse(reservas):
 
 # User
 @csrf_exempt
-@login_required
 def getUserHistorial(req): # reservas de 1 usuario o del usuario loggeado
   if req.body:
-    # if req.user.rol == None: return JsonResponse({"error": "Action not permited"})
+    if req.user.rol == None: return JsonResponse({"error": "Action not permited"})
     body_unicode = req.body.decode('utf-8')
     body = json.loads(body_unicode)
     userId = body['id']
@@ -684,6 +683,7 @@ def getReserva(req):
 def createReserva(req):
   body_unicode = req.body.decode('utf-8')
   body = json.loads(body_unicode)
+  print(req.user.id)
   idUsuario = Usuario.objects.get(pk=req.user.id)
   #try:
   codigoReserva = generateCodigoReserva()
