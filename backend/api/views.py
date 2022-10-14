@@ -753,12 +753,13 @@ def loginUser(req):
     if user.deletedAt != None: return HttpResponseForbidden()
     if user.fechaDesbloqueo != None:
       today = timezone.make_aware(datetime.today())
-      print(today, user.fechaBloqueo, user.fechaDesbloqueo)
-      if today >= user.fechaBloqueo and today < user.fecha.Desbloqueo: return HttpResponseForbidden()
+      if today >= user.fechaBloqueo and today < user.fechaDesbloqueo: return HttpResponseForbidden()
     email = body['email']
     password = body["password"]
+    print(email, password)
     authenticatedUser = authenticate(req, correo=email, password=password)
     if authenticatedUser is not None:
+      print(authenticatedUser)
       login(req, authenticatedUser) # set user in req.user
       userDict = {
         "user": req.user.id,
@@ -768,7 +769,7 @@ def loginUser(req):
     else:
       return JsonResponse({ "error": "El correo o la contraseña no son correctos" })
   except:
-      return JsonResponse({ "error": "El correo o la contraseña no son correctos" })
+    return JsonResponse({ "error": "El correo o la contraseña no son correctos" })
 
 @csrf_exempt
 def createUser(req): # Add email validation

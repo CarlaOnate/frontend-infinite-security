@@ -71,13 +71,17 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
+
 CORS_ALLOW_CREDENTIALS = True
-SESSION_COOKIE_SAMESITE = None
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
+SECURE_SSL_REDIRECT = False
 
 ROOT_URLCONF = 'backend.urls'
 
 AUTH_USER_MODEL = 'api.Usuario'
-
 
 TEMPLATES = [
     {
@@ -107,8 +111,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-SECURE_SSL_REDIRECT = False
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
