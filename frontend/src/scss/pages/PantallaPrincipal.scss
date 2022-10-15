@@ -1,18 +1,47 @@
+h3 {
+  font-size: $fontSizeMedium;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* 
+background-image:
+            linear-gradient(45deg,
+              rgba(245,70,66, 0.75),
+              rgba(8,83,156, 0.75)), url(
+'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png');
+            width: 100%;
+            height: 280px;
+            text-align: center;
+              color: #fff;
+*/
+
 .PrimeraSeccion{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(rgb(34, 1, 255), rgb(54, 146, 186));/*Poner la imagen de fondo*/
-    /*background-image: url('../Imagenes/taylor-vick-M5tzZtFCOfs-unsplash.jpg');*/
-    height: 400px;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgba(43, 171, 215, 0.75), rgb(34, 1, 255, 0.7)), url(
+    '../../images/taylor-vick-M5tzZtFCOfs-unsplash.jpg');
+    height: 45rem;
+    padding-top: 2rem;
+
+    h1 {
+      font-size: $fontSizeHeading;
+      font-weight: bold;
+      color: white;
+    }
+    
+    h3 {
+      color: white;
+    }
 }
 
-.ContenedorInicial1{
-    margin-right: 250px;
-}
-
-.ContenedorInicio{
+.ContenedorInicio {
     display: flex;
     flex-direction: column;
     font-weight: 900;
@@ -21,66 +50,80 @@
     width: 300px;
 }
 
+.landing__button {
+  background-color: $orangeColor;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
 .Subtitulo{
     font-weight: 500;
 }
 
-.ContenedorCajaNaranja{
+.CajaNaranja{
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: 2;
-    top: 410px;
-    width: 98.9vw;
-}
-
-.CajaNaranja{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 80vw;
+    top: 45rem;
+    left: 10rem;
     gap: 10px;
-    background-color: rgb(223, 69, 39);
-    opacity: 0.8;
-    padding: 10px;
+    background-color: $navbarOrangeColor;
+    padding: 1.5rem;
     color: white;
-    font-size: large;
+    font-size: $fontSizeMedium;
     font-weight:800;
-    width: fit-content;
+
+    p {
+      margin: 0;
+      font-size: $fontSizeMedium;
+    }
 }
 
-.SegundaSeccion{
-    padding-top: 70px;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
+.SegundaSeccion {
+  @include flexbox;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding-top: 10rem;
+  height: 30rem;
+  p {
+    font-weight: normal;
+  }
 }
 
 .Numeros{
     display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
     gap: 40px;
+    & > div {
+      width: 20vw;
+      @include flexbox;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    p {
+      font-size: $fontSizeSmall;
+    }
 }
 
-.Numeritos{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.Numeritos1{
-    display: flex;
-    flex-direction: column;
-    gap: 110px;
+.landing__2__boxnumbers {
+  background-color: $orangeColor;
+  padding: 0.5rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
 .CajaTexto{
-    margin-left: 50px;
-    color:black;
-    font-size: xx-large;
-    font-weight: 800;
+    p:first-child {
+      color : $orangeColor;
+      font-weight: bold;
+    }
 }
 
 .Subtitulo2{
@@ -89,30 +132,62 @@
     font-weight: 700;
 }
 .Txt{
-    font-size:large;
+    font-size: $fontSizeMedium;
+}
+
+.landing__img__3 {
+  height: 1rem;
+  position: relative;
+  z-index: 1000;
+  height: 45rem;
+  top: 3rem;
+  background-image: url("../../images/ImagenPantallaPrincipal1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .TerceraSeccion{
+    padding-top: 10rem;
     background-color: rgb(235, 232, 226);
-    margin-top: 40px;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 40px;
+    height: 45rem;
+    padding: 2rem 4rem 5rem;
 }
 
 .Cajitas{
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 80px;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .Cajitasseccion3{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+
+    & > div {
+      @include flexbox;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      width: 20vw;
+      background-color: white;
+      font-size: $fontSizeTiny;
+      flex-grow: 2;
+      border-radius: 1rem;
+
+      img {
+        height: 6rem;
+      }
+    }
+
 }
 
 .CuartaSeccion{
@@ -123,6 +198,12 @@
     gap: 40px;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.landing__appImg {
+  img {
+    height: 15rem;
+  }
 }
 
 .Contenedorflexcuartaseccion{
@@ -138,7 +219,6 @@
 }
 
 .CajaTexto2{
-    color:black;
-    font-size: xx-large;
+    font-size: $fontSizeHeading;
     font-weight: 800;
 }

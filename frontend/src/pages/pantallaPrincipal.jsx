@@ -1,10 +1,11 @@
 import React from "react";
-import Button from "../components/Button";
+import { Button, Image } from "antd";
 import CajaNumeros from "../components/NumberBox"
-import CajaImagen from "../components/ImageBox";
-import '../Estilos/Pantallaprincipal.css'
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import lockImg from '../images/Candado.jpg';
+import dataEncryption from '../images/data-encryption.png';
+import iosLogo from '../images/IOS.png';
 
 const Pantallaprincipal = ()=>{
 
@@ -18,96 +19,95 @@ const Pantallaprincipal = ()=>{
         <div>
             <div className="PrimeraSeccion">
                 <section className="ContenedorInicial1">
-                    
                     <div className="ContenedorInicio">
-                        HUB de Ciberseguridad Campus Santa Fe
-
-                        <section className="Subtitulo">
-                            Primera institución especializada en la ciberseguridad mexicana
-                        </section>
-                        
-                        <button className="CodigoPeque">
-                            <NavLink to="reserves" className={paths.home}>Descubre más</NavLink> 
-                        </button>
-                        {/* <Button texto = "Descubre más" clase = 'CodigoPeque'/> */}
+                        <h1>HUB de Ciberseguridad Campus Santa Fe</h1>
+                        <h3>Primera institución especializada en la ciberseguridad mexicana</h3>
+                        <Button className="landing__button">
+                            <NavLink to="reserves" className={paths.home}>Descubre más</NavLink>
+                        </Button>
                     </div>
-
                 </section>
             </div>
 
-            <div className="ContenedorCajaNaranja">
+            <div>
                 <section className="CajaNaranja">
-                    <div>Porque la seguridad siempre es lo primero.</div>
-                    <div>Descubre porque somos la mejor institución en ciberseguridad.</div>
+                  <p>
+                    Porque la seguridad siempre es lo primero.
+                    Descubre porque somos la mejor institución en ciberseguridad.
+                  </p>
                 </section>
             </div>
             
             <div className="SegundaSeccion">
                 <div className="CajaTexto">
-                    <section className="Titulo">
-                        ¿Porque nosotros?
-                    </section>
-                    <section className="Subtitulo2">
-                        Somos una organización líder en ciberseguridad.
-                    </section>
-                    <section className="Txt">
-                        Apoyamos a crear una sociedad más segura
-                    </section>
+                  <h3>¿Porque nosotros?</h3>
+                  <p>Somos una organización líder en ciberseguridad.</p>
+                  <p>Apoyamos a crear una sociedad más segura</p>
                 </div>
-
                 <div className="Numeros">
-                    <div className="Numeritos1">
-                        <CajaNumeros texto = "Impulsamos el desarrollo del primer ecosistema de este tipo en México y Latinoamérica." numero = '1'/>
-                        <CajaNumeros texto = "Brindamos soporte para que cualquier organización o empresa salvaguarde información estratégica." numero = '2'/>
+                    <div>
+                      <div className="landing__2__boxnumbers">01</div>
+                      <p>Impulsamos el desarrollo del primer ecosistema de este tipo en México y Latinoamérica</p>
                     </div>
-                    <div className="Numeritos">
-                        <CajaNumeros texto = "Creamos programas de difusión y concientización sobre la necesidad permanente de contar con herramientas, personal capacitado y los servicios alrededor de la ciberseguridad." numero = '3'/>
-                        <CajaNumeros texto = "Buscamos el florecimiento humano a través del liderazgo, el emprendimiento y la innovación." numero = '4'/>
+                    <div>
+                      <div className="landing__2__boxnumbers">02</div>
+                      <p>Brindamos soporte para que cualquier organización o empresa salvaguarde información estratégica.</p>
                     </div>
-                </div>
+                    <div>
+                      <div className="landing__2__boxnumbers">03</div>
+                      <p>Creamos programas de difusión y concientización sobre la necesidad permanente de contar con herramientas, personal capacitado y los servicios alrededor de la ciberseguridad.</p>
+                    </div>
+                    <div>
+                      <div className="landing__2__boxnumbers">04</div>
+                      <p>Buscamos el florecimiento humano a través del liderazgo, el emprendimiento y la innovación.</p>
+                    </div>
+              </div>
             </div>
-                
-            <img src = "../Imagenes/ImagenPantallaPrincipal1.png" alt = "Imagen del Tec pantalla 1" />
-
+            <div className="landing__img__3">
+              <div />
+            </div>
             <div className="TerceraSeccion">
-
-                <div className="CajaTexto">
-                    ¿Porque nosotros?
-                </div> 
-
+                <h3>¿Porque nosotros?</h3>
                 <div className="Cajitas">
-
-                    <div className="Cajitasseccion3">
-                        <CajaImagen ruta = '../Imagenes/Candado.jpg' txt = "Ayudamos a crear una cultura de ciberseguridad"/>
-                        <CajaImagen ruta = '../Imagenes/Candado.jpg' txt = "Creamos profesionales competentes"/>
+                  <div className="Cajitasseccion3">
+                    <div>
+                      <img src={lockImg} alt="yellow lock"/>
+                      <p>Ayudamos a crear una cultura de ciberseguridad</p>
                     </div>
-
-                    <div className="Cajitasseccion3">
-                        <CajaImagen ruta = '../Imagenes/Candado.jpg' txt = "Diseñamos estrategias para empresas"/>
-                        <CajaImagen ruta = '../Imagenes/Candado.jpg' txt = "Asesoramos empresas"/>
+                    <div>
+                      <img src={dataEncryption} alt="yellow lock"/>
+                      <p>Diseñamos estrategias para empresas</p>
                     </div>
-
-                    <div className="Cajitasseccion3">
-                        <CajaImagen ruta = '../Imagenes/Candado.jpg' txt = "Diseñamos el mañana hoy"/>
-                        <CajaImagen ruta = '../Imagenes/Candado.jpg' txt = "Creamos lo inimaginable con ayuda de los profesionistas del mañana"/>
+                    <div>
+                      <img src={dataEncryption} alt="yellow lock"/>
+                      <p>Diseñamos el maañana hoy</p>
                     </div>
-
-                </div>   
+                  </div>
+                  <div className="Cajitasseccion3">
+                    <div>
+                      <img src={lockImg} alt="yellow lock"/>
+                      <p>Ayudamos a crear una cultura de ciberseguridad</p>
+                    </div>
+                    <div>
+                      <img src={dataEncryption} alt="yellow lock"/>
+                      <p>Diseñamos estrategias para empresas</p>
+                    </div>
+                    <div>
+                      <img src={dataEncryption} alt="yellow lock"/>
+                      <p>Diseñamos el maañana hoy</p>
+                    </div>
+                  </div>
+                </div>
             </div>
 
             <div className="CuartaSeccion">
                 <div className="Contenedorflexcuartaseccion">
-                    <div className="CajaTexto2">
-                        Descubre la app
-                    </div>
-                    <div className="subtituloCuartaseccion">
-                        Bajala de la App Store y descrubre su potencial
-                    </div>
-                    <Button texto = "Descarga aquí" clase = 'CodigoPeque'/>
+                    <h3 className="CajaTexto2">Descubre la app</h3>
+                    <p>Bajala de la App Store y descrubre su potencial</p>
+                    <Button className='CodigoPeque'>Descarga aquí</Button>
                 </div>
-
-                <div className="Prueba">
-                    <img src='../Imagenes/IOS.jpg' alt="Imagen IOS"/> 
+                <div className="landing__appImg">
+                    <img src={iosLogo} alt="Imagen IOS"/>
                 </div>
             </div>
 
