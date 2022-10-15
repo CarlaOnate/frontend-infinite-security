@@ -1,4 +1,5 @@
 @mixin button($color) {
+  border: none;
   background-color: $color;
   border-radius: 4%;
 }
@@ -10,8 +11,19 @@
   border-radius: 4%;
 }
 
-.standarButton {
+@mixin filledButton($color) {
+  color: white;
+  background-color: $color;
+  border-radius: 4%;
+  border: none;
+}
+
+.standardButton {
     @include button($standarButtonColor);
+}
+
+.orangeFilledButton {
+    @include filledButton($orangeColor);
 }
 
 .warningButton {
