@@ -1,8 +1,10 @@
 .InicioSesionGeneral{
     display: flex;
-    /* gap: 300px; */
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    padding: 0 5rem;
+    gap: 1rem;
 }
 
 .TitulosInicioSesion{
@@ -12,8 +14,12 @@
     gap: 20px;
 }
 
+.login__inputs {
+  flex-grow: 3;
+}
+
 .TituloIniciarSesion{
-    font-size: xx-large;
+    font-size: $fontSizeHeading;
 }
 
 .CajasTextoInicioSesion{
@@ -27,4 +33,11 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+
+.login__img {
+  flex-grow: 2;
+  img {
+    width: 40vw;
+  }
 }

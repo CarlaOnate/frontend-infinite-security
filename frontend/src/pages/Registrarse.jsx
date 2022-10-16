@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import { DatePicker, Alert } from 'antd';
 import {crearUsuario, sendEmail} from '../services/axios/user'
 import { validatePasswordStrength } from "../util";
+import loginImg from '../images/InicioSesion.png';
 
 const Registrarse = () => {
     const navigate = useLocation()
@@ -88,15 +89,16 @@ const Registrarse = () => {
     return(
         <div className="ArearegistroGeneral">
           <div className="ImagenRegistro">
-            <img src="../Imagenes/InicioSesion.png" alt="Imagen Registro"/>
+            <img src={loginImg} alt="Imagen Registro"/>
           </div>
-            <div className="AreadeCamposRegistro">
-                <div className="TitulosRegistrarse1">
-                    <div className="TituloIniciarSesion">Registrarse</div>
-                    <div>
-                        <NavLink to="/login" className={paths.IniciarSesion}> Iniciar Sesion </NavLink>
-                    </div>
-                </div>
+          <div className="AreadeCamposRegistro">
+              <div className="TitulosRegistrarse1">
+                  <h1 className="TituloIniciarSesion">Registrarse</h1>
+                  <div>
+                      <NavLink to="/login" className={paths.IniciarSesion}> Iniciar Sesion </NavLink>
+                  </div>
+              </div>
+              <div className="signup__inputs">
                 <p>Nombre:</p>
                 <Input onChange = {(e) => handelInputs(e,"name")}/>
                 <p>Apellido Paterno:</p>
@@ -132,13 +134,14 @@ const Registrarse = () => {
                 {warning.msg && renderWarning()}
                 {error && renderError()}
                 <div className="BotonRegistrarse">
-                    <button onClick={handleStep1} className="CodigoPeque">
+                    <button onClick={handleStep1} className="orangeFilledButton">
                     Continuar
                     </button>
                 </div>
                 {loading && <Spin size="small" />}
-            </div>
-            {redirect && <Navigate to="/RegistrarseCodigo" state = {{"inputs":inputs}}/>}
+              </div>
+          </div>
+          {redirect && <Navigate to="/RegistrarseCodigo" state = {{"inputs":inputs}}/>}
         </div>
     )
 }

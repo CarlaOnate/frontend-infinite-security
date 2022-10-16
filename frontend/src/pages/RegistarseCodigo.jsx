@@ -1,10 +1,11 @@
 import React, {useState, useContext} from "react";
 import { NavLink} from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
-import '../Estilos/RegistroCodigo.css'
 import {verificar, verificarUsuario, login, sendEmail} from '../services/axios/user'
 import { Button, Input } from "antd";
 import {UserContext} from '../context/userContext'
+import loginImg from '../images/InicioSesion.png';
+
 
 
 const RegistrarseCodigo = (props) =>{
@@ -59,7 +60,7 @@ const RegistrarseCodigo = (props) =>{
 
         <div className="GeneralRegistroCodigo">
             <div className="ImagenRegistroCodigo">
-                <img src="../Imagenes/InicioSesion.png" alt = "Imagen"/>
+                <img src={loginImg} alt = "login img showing dashboard and 3d figures"/>
             </div>
             <div className="SeccionTextoRegistroCodigo">
                 <div className="TitulosRegistroCodigo">
@@ -67,7 +68,7 @@ const RegistrarseCodigo = (props) =>{
                         Registrarse
                     </div>
                     <div className="Link1RegistroCodigo">
-                        <NavLink to="/IniciarSesion" className={paths.IniciarSesion}>Iniciar Sesion</NavLink>
+                        <NavLink to="/login" className={paths.IniciarSesion}>Iniciar Sesion</NavLink>
                     </div>
                 </div>
                 <br></br>
@@ -77,7 +78,7 @@ const RegistrarseCodigo = (props) =>{
                   <Button className="Codigoverde" onClick={onClickResendCode}>Reenviar codigo</Button>
                 </div>
                 <div className="BotonRegistrarfinalcodigo">
-                    <button className="CodigoMediano" onClick={handleStep1}>
+                    <button className="orangeFilledButton" onClick={handleStep1}>
                         Registrarme
                     </button>
                 </div>

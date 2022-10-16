@@ -2,10 +2,10 @@ import React , {useContext, useState} from "react";
 import { NavLink } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
-import '../Estilos/IniciarSesion.css'
 import {login} from '../services/axios/user.js'
 import {UserContext} from '../context/userContext'
 import { Button, Input, Alert } from "antd";
+import loginImg from '../images/InicioSesion.png';
 
 const IniciarSesion = () => {
     const [inputs, setInputs] = useState();
@@ -51,10 +51,10 @@ const IniciarSesion = () => {
 
     return(
         <div className="InicioSesionGeneral">
-          <div className="Imagen">
-            <img src="../Imagenes/InicioSesion.png" alt="Imagen Inicio Sesion"/>
+          <div className="login__img">
+            <img src={loginImg} alt="Imagen Inicio Sesion"/>
           </div>
-          <div className="CajasTexto">
+          <div className="login__inputs">
             <div className="ContenedoresGenerales">
               <div className="TitulosInicioSesion">
                 <div className="TituloIniciarSesion">Inicia Sesión</div>
