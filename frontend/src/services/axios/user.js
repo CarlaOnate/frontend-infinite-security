@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://127.0.0.1:8000/api"; //Cambiar
+const baseURL = "https://infinite-security.herokuapp.com/api"; //Cambiar
 const service = axios.create({ baseURL, headers: {
   'Content-Type': 'application/json',
 },
