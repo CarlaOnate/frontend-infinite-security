@@ -16,7 +16,7 @@ const renderVerified = (_, record) => {
   const { verified } = record;
   const verifiedIcon = verified ? <CheckCircleFilled/> : <ExclamationCircleFilled />
   return (
-    <div key={`${record.username}+${record.pk}`} className={`tag ${verified && 'verificado'}`}>{verifiedIcon}</div>
+    <div key={`${record.username}+${record.pk}`} className={`tag ${verified ?  'verificado' : 'noVerificado'}`}>{verifiedIcon}</div>
   )
 }
 

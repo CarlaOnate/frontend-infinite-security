@@ -1,0 +1,9 @@
+[submodule "backend_submodule/backend-infinite-security"]
+	path = backend_submodule/backend-infinite-security
+	url = https://github.com/CarlaOnate/backend-infinite-security.git
+[submodule "backend-infinite-security"]
+	path = backend-infinite-security
+	url = https://github.com/CarlaOnate/backend-infinite-security.git
+[submodule "frontend-infinite-security"]
+	path = frontend-infinite-security
+	url = https://github.com/CarlaOnate/frontend-infinite-security.git

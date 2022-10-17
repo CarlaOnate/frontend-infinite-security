@@ -73,9 +73,11 @@ const IniciarSesion = () => {
               </div>
               <div className="BotonLinkfinal">
                 <Button onClick={onClickLogin} className="CodigoPeque">Iniciar sesión</Button>
+
                 <div className="LinkContraseña">
-                    <NavLink to="/RecuperarContra" className={paths.RecuperarContra}> Recuperar Contraseña </NavLink>
+                  <NavLink to="/RecuperarContra" className={paths.RecuperarContra}> Recuperar Contraseña </NavLink>
                 </div>
+              
               </div>
               {error.msg &&
                 <div>
