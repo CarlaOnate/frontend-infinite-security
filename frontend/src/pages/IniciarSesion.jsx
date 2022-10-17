@@ -52,7 +52,7 @@ const IniciarSesion = () => {
     return(
         <div className="InicioSesionGeneral">
           <div className="Imagen">
-            <img src="../Imagenes/InicioSesion.png" alt="Imagen Inicio Sesion"/>
+            <img src="../images/InicioSesion.png" alt="Imagen Inicio Sesion"/>
           </div>
           <div className="CajasTexto">
             <div className="ContenedoresGenerales">
@@ -73,9 +73,11 @@ const IniciarSesion = () => {
               </div>
               <div className="BotonLinkfinal">
                 <Button onClick={onClickLogin} className="CodigoPeque">Iniciar sesión</Button>
+
                 <div className="LinkContraseña">
-                    <NavLink to="/RecuperarContra" className={paths.RecuperarContra}> Recuperar Contraseña </NavLink>
+                  <NavLink to="/RecuperarContra" className={paths.RecuperarContra}> Recuperar Contraseña </NavLink>
                 </div>
+              
               </div>
               {error.msg &&
                 <div>

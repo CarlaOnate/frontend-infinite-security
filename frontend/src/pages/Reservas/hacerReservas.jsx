@@ -142,12 +142,12 @@ const HacerReserva = props => {
         <TimePicker.RangePicker onChange={onChangeHora} />
         <div className="BotonHacerReservaDerecha">
           {pantalla === 1 &&
-            <button className= "CodigoPeque" onClick={subirDatos}>
+            <button className= "CodigoPeque2" onClick={subirDatos}>
               Reservar
             </button>
           }
           {pantalla === 2 &&
-            <button className= "CodigoPeque" onClick={subirDatos2}>
+            <button className= "CodigoPeque2" onClick={subirDatos2}>
               Reservar productos
             </button>
           }

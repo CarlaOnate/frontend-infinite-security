@@ -683,7 +683,6 @@ def getReserva(req):
 def createReserva(req):
   body_unicode = req.body.decode('utf-8')
   body = json.loads(body_unicode)
-  print(req.user.id)
   idUsuario = Usuario.objects.get(pk=req.user.id)
   #try:
   codigoReserva = generateCodigoReserva()

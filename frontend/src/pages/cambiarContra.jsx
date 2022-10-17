@@ -101,7 +101,7 @@ const Contra = (props) => {
                         className='InputContra'
                         iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}/>
 
-                        <p>Confirma la nueva contraseña</p>
+                        <p className='ParrafoBoton'>Confirma la nueva contraseña</p>
                         <Input.Password 
                         placeholder="Confirma la contraseña" 
                         className='InputContra'
