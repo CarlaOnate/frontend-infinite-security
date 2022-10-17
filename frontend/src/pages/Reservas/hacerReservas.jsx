@@ -97,7 +97,7 @@ const HacerReserva = props => {
   )
 
   const subirDatos = () => {
-    if((enviado['Piso'] !==undefined && enviado['Salon'] !==undefined) || (enviado['Productos'] !==undefined && enviado['Categoria'] !==undefined && (enviado['Cantidad'] !== undefined || enviado['Cantidad'] !== 0))){
+    if((enviado['Piso'] !==undefined && enviado['Salon'] !==undefined) || (enviado['Productos'] !==undefined && enviado['Categoria'] !==undefined)){
       crearReserva(enviado)
         .then(data => {
           if (data.warning) return setAviso(2)
@@ -110,8 +110,9 @@ const HacerReserva = props => {
   }
 
   const subirDatos2 = () => {
-    if((enviado['Productos'] !==undefined && enviado['Categoria'] !==undefined && (enviado['Cantidad'] !== undefined || enviado['Cantidad'] !== 0))){
-      crearReserva(enviado)
+    if((enviado['Productos'] !==undefined && enviado['Categoria'] !==undefined)){
+      const reqObject = {...enviado, Piso:null, Salon:null}
+      crearReserva(reqObject)
         .then(data => {
           if (data.warning) return setAviso(2)
           if (data.Recurso) return changeMenuOption('reservations-list')
